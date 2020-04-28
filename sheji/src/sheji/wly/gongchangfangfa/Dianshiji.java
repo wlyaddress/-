@@ -1,6 +1,6 @@
 package sheji.wly.gongchangfangfa;
 
-public class Dianshiji implements chanpin{
+public class Dianshiji implements Chanpin{
 
 	@Override
 	public void 产品() {

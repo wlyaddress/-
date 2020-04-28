@@ -1,6 +1,6 @@
 package sheji.wly.gongchangfangfa;
 
-public class Shouji implements chanpin{
+public class Shouji implements Chanpin{
 
 	@Override
 	public void 产品() {
