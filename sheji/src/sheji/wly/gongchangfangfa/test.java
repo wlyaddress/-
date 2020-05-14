@@ -1,5 +1,8 @@
 package sheji.wly.gongchangfangfa;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class test {
 
 	/* ** 工厂方法模式 **
@@ -10,7 +13,18 @@ public class test {
 	 * 2.基于工厂角色和产品角色的多态性设计是工厂方法模式的关键。它能够让工厂自主确定创建何种产品对象,
 	 * 而如何创建这个对象的细节完全封装在具体工厂内部。
 	 * 工厂方法模式之所以又被称为多态工厂模式,正是因为所有的具体工厂类都具有同一抽象父类。
-	 * 
+	 * System.out.println("出售什么产品");
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			String type = br.readLine();
+			if (type.equals("dianshiji")) {
+				factory = new DianshijiFactory();
+			} else if (type.equals("shouji")){
+				factory = new ShoujiFactory();
+			} else if (type.equals("diannao")) {
+				factory = new DiannaoFactory();
+			}
+			cp = factory.createChanPin();
+			cp.产品();
 	 * 3.系统中加入新产品时无须修改抽象工厂和抽象产品提供的接口,无须修改客户端,
 	 * 也无须修改其他的具体工厂和具体产品,只需要添加一个具体工厂和具体产品即可,这样系统的可扩展性也就变得非常好,完全符合开闭原则。
 	 */
